@@ -4,15 +4,15 @@
 }
 
 
-body {
-    cursor:url(cursor.cur),auto;
+html, body{
+    cursor:url('photos/worm.png'), auto;
     background: aquamarine;
 
 }
 
 #radish{
 
-    cursor:pointer;
+    cursor:url('photos/worm2.png'),pointer;
 
 }
 
