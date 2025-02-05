@@ -191,15 +191,16 @@ html, body{
 
     #title{
         font-size: 18px;
+
         grid-column: span 6;
         grid-row: 1;
         justify-content: center;
     }
 
     .subcat{
-        grid-row: 2;
+        grid-row: 3;
         grid-column-start:2;
-        font-size: 10px;
+        font-size: 11px;
 
     }
     #subcat1{
@@ -218,6 +219,9 @@ html, body{
         grid-column:5;
     }
 
+    .subcat a:hover{
+        font-size: 11.5px;
+    }
 
     #name{
  
