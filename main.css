@@ -15,13 +15,13 @@ html, body{
 
 }
 
-#radish a{
-    transition: transform 0.3s ease-in-out; /* Smooth transition */
-
+.radish a{
+    transition: transform 0.3s ease-in-out; 
+    cursor:url('photos/worm2.png'),pointer !important;
 }
 
-#radish a:hover{
-    /* transform: scale(1.2); */
+.radish a:hover{
+    transform: scale(1.2);
     cursor:url('photos/worm2.png'),pointer !important;
 
 }
@@ -30,14 +30,13 @@ html, body{
     list-style-type:none;
     background-color: white;
     position: fixed;
-    justify-items: center;
     width: 25%;
     height: 100vh;
 
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centers items vertically */
-    align-items: center; /* Centers items horizontally */
+    justify-content: center;
+    align-items: center; 
 
     padding: 0 15px;
 }
@@ -64,19 +63,20 @@ html, body{
     /* font-family: "Lexend Giga", serif;
     font-optical-sizing: auto; */
 }
-#subcat{
+.subcat{
     font-family: "Montserrat", serif;
     font-optical-sizing: auto;
     font-weight: 600;
   
 }
 
-#subcat a{
+.subcat a{
     transition: font-size 0.3s ease-in-out; /* Smooth transition */
 
 }
-#subcat a:hover{
+.subcat a:hover{
     font-size: 20px;
+    cursor:url('photos/worm2.png'),pointer !important;
 }
 
 
@@ -167,4 +167,83 @@ html, body{
     font-optical-sizing: auto;
     font-weight: 400;
     font-size: 10px;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .menu ul{
+        flex-direction:row; /* turns the vav bar inti row instead cokumn*/
+        height: 40px; /* white rect snaller */
+        width: 100%;
+        justify-content: center;
+        padding: 5px 0; 
+
+        display:grid;
+        grid-template-columns: 20% 20% 20% 20% 20%; 
+        grid-template-rows: 50% 45% 5%;
+        padding: 3%;
+        
+    }
+
+    .menu li {
+        margin: 0 9px; 
+  }
+
+    #title{
+        font-size: 18px;
+        grid-column: span 6;
+        grid-row: 1;
+        justify-content: center;
+    }
+
+    .subcat{
+        grid-row: 2;
+        grid-column-start:2;
+        font-size: 10px;
+
+    }
+    #subcat1{
+        grid-column:2;
+    }
+
+    #subcat2{
+        grid-column:3;
+    }
+
+    #subcat3{
+        grid-column:4;
+    }
+
+    #subcat4{
+        grid-column:5;
+    }
+
+
+    #name{
+ 
+        visibility: hidden;
+     }
+
+    .radish img {
+        margin-top: -20px;
+        width: 60%; 
+        height: auto;
+        overflow: hidden;
+    }
+
+    .projectContainer {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        gap: 20px;
+        padding: auto;
+    }
+       .projtext {
+        order: 2; 
+        text-align: center;
+    }
+
+    .projimg {
+        order: 1; 
+    }
 }
