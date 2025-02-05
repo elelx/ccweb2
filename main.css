@@ -152,7 +152,7 @@ html, body{
 }
 
 .bottom{
-   padding: 5%;
+    padding: 5%;
     text-align: center;
     font-family: "Montserrat", serif;
     font-optical-sizing: auto;
@@ -242,4 +242,9 @@ html, body{
         gap: 20px;
         padding: auto;
     }
+    .bottom{
+        margin-top: -20%;
+        padding: 20px;
+    }
+
 }
