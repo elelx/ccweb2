@@ -242,12 +242,4 @@ html, body{
         gap: 20px;
         padding: auto;
     }
-       .projtext {
-        order: 2; 
-        text-align: center;
-    }
-
-    .projimg {
-        order: 1; 
-    }
 }
