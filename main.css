@@ -4,19 +4,27 @@
 }
 
 
+.projectContainer div {
+    scroll-margin-top: 30vh; /* moves the section down like margin, so the thing can be in the middle not all the way to top*/
+}
+
 html, body{
     cursor:url('photos/worm.png'), auto;
     background: aquamarine;
+    scroll-behavior: smooth; 
 
 }
 
-#radish{
-
-    cursor:url('photos/worm2.png'),pointer;
+#radish a{
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
 
 }
 
+#radish a:hover{
+    /* transform: scale(1.2); */
+    cursor:url('photos/worm2.png'),pointer !important;
 
+}
 
 .menu ul{
     list-style-type:none;
@@ -63,12 +71,20 @@ html, body{
   
 }
 
+#subcat a{
+    transition: font-size 0.3s ease-in-out; /* Smooth transition */
+
+}
+#subcat a:hover{
+    font-size: 20px;
+}
+
+
+
 #name{
     font-family: "Montserrat", serif;
     font-optical-sizing: auto;
-  
     font-size: 6.5px;
-
 }
 
 
@@ -85,7 +101,7 @@ html, body{
     font-family: "Montserrat", serif;
     font-optical-sizing: auto;
     font-weight: 800;
-    font-size: 15px;
+    font-size: 18px;
 }
 
 #project1{
@@ -97,7 +113,6 @@ html, body{
 }
 #text1{
     grid-column-start: 2;
-    grid-column-end: 2;
 }
 
 #project2{
@@ -110,7 +125,6 @@ html, body{
 
 #text2{
     grid-column-start: 2;
-    grid-column-end: 2;
 }
 
 #project3{
@@ -123,7 +137,6 @@ html, body{
 
 #text3{
     grid-column-start: 2;
-    grid-column-end: 2;
 }
 
 #project4{
@@ -136,7 +149,6 @@ html, body{
 
 #text4{
     grid-column-start: 2;
-    grid-column-end: 2;
 }
 
 .bottom{
@@ -144,8 +156,15 @@ html, body{
     text-align: center;
     font-family: "Montserrat", serif;
     font-optical-sizing: auto;
-  
     font-size: 6.5px;
     position: relative;
 }
 
+.projdescrip{
+    margin-top: 5%;
+    text-align: center;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 10px;
+}
