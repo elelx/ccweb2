@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    cursor:url('photos/worm.png'), auto;
+    background: aquamarine;
+    scroll-behavior: smooth; 
+
+}
+
+.radishContain{
+    grid-template-columns: 50% 50%;
+}
+
+#radish{
+    grid-column: 1;
+    height:600px;
+}
