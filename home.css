@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    border: 1px solid red; 
 }
 
 html, body{
@@ -13,27 +14,27 @@ html, body{
 .nav{
     display: grid;
     grid-template-columns: 33.33% 33.33% 33.33% ;
-    grid-template-rows: 5% 5% 32% 4% 5% 20% 4% ;
+
+    grid-template-rows: 5% 5% 28% 4% 5% 20% 4% ;
     justify-items: center;
     padding: 30px 10px;
     background-color: beige;
 }
 
 .nav div{
-    scroll-margin-top: 30vh;
+    scroll-margin-top: 20vh;
 }
 
+.navbar{
+    grid-row: 1;
+    grid-column: span 3;
+
+}
 .projectssem1{
     grid-row: 3;
     grid-column: span 3;
 
 }
-
-.projectssem2{
-    grid-row: 6;
-    grid-column: span 3;
-}
-
 #buttons{
     grid-row: 4;
     grid-column: 2;
@@ -48,6 +49,15 @@ html, body{
     border-radius: 30px;      
 }
 
+.projectssem2{
+    margin-top: 3%;
+    grid-row: 6;
+    grid-column: span 3;
+    justify-items: center;
+}
+
+
+
 #buttons1{
     grid-row: 7;
     grid-column: 2;
@@ -61,7 +71,12 @@ html, body{
     padding: 20px 30px;  
     border-radius: 30px;      
 }
+.text{
+    display: inline;
+    grid-column: span 3;
+    text-align: center;
 
+}
 .text a{
 
     justify-items: center;
@@ -74,6 +89,8 @@ html, body{
     font-size: 20px;
     font-weight: bold;
     margin-right: 20px;
+    margin-left: 20px;
+
 }
 
 
@@ -81,6 +98,7 @@ html, body{
 .intro{
     margin-top: 3%;
     font-size: 80px;
+    text-align: center;
     justify-items: center;
     font-family: "Montserrat", serif;
     font-optical-sizing: auto;
@@ -106,12 +124,53 @@ html, body{
 
 .titles{
     grid-column: 2;
-    margin-top: 3%;
     color:rgb(0, 106, 90);
     justify-items: center;
+
     font-family: "Montserrat", serif;
     font-optical-sizing: auto;
+
     font-size: 20px;
     font-weight: 800;
 
+}
+
+#title1{
+    grid-row: 2;
+    margin-top: 3%;
+ 
+}
+
+#title2{
+    margin-top: 13%;
+}
+
+@media screen and (max-width: 1000px) {
+    .nav{
+        padding: 10px; 
+        grid-template-rows: auto auto auto auto auto auto auto;
+    }
+    .projectssem1 img{
+        width: 30%;
+        height: auto;
+        justify-items:center;
+        padding: 3px;
+    }
+
+    .text a{
+        font-size: smaller;
+        text-align: center;
+    }
+    .titles{
+        font-size: smaller;
+        text-align: center;
+        grid-column: span 3;
+    }
+    #buttons{
+
+        padding: 3px 10px;
+    }
+    #title1{
+        margin: 0;
+    }
 }
