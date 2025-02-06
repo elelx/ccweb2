@@ -9,32 +9,91 @@ html, body{
     scroll-behavior: smooth; 
 
 }
-/* 
-.radishContain{
-    grid-template-columns: 50% 50%;
-}
-
-#radish{
-    grid-column: 1;
-    height:600px;
-} */
 
 .nav{
- 
-    grid-template-columns: 50% 50%;
-
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33% ;
+    grid-template-rows: 5% 5% 32% 4% 5% 20% 4% ;
+    justify-items: center;
+    padding: 30px 10px;
+    background-color: beige;
 }
 
-.menu
-{
-    list-style: none;
-    background-color: white;
-    width: 25%;
+.nav div{
+    scroll-margin-top: 30vh;
+}
 
-    display: flex;
-    justify-content: left;
-    align-items: left; 
+.projectssem1{
+    grid-row: 3;
+    grid-column: span 3;
+}
 
-    padding: 0 15px;
+.projectssem2{
+    grid-row: 6;
+    grid-column: span 3;
+}
+
+#buttons{
+    grid-row: 4;
+    grid-column: 2;
+
+    justify-items: center;
+    font-family: "Montserrat", serif;
+    font-size: 14px;
+    font-weight: bold;
+
+    background-color: aquamarine; 
+    padding: 20px 30px;  
+    border-radius: 30px;      
+}
+
+#buttons1{
+    grid-row: 7;
+    grid-column: 2;
+
+    justify-items: center;
+    font-family: "Montserrat", serif;
+    font-size: 14px;
+    font-weight: bold;
+
+    background-color: aquamarine; 
+    padding: 20px 30px;  
+    border-radius: 30px;      
+}
+
+.text a{
+
+    justify-items: center;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+
+    height: 100vh;
+    text-decoration: none;
+    color:rgb(0, 106, 90);
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+
+
+.intro{
+    font-size: 80px;
+    justify-items: center;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    color: rgb(0, 106, 90);
+}
+
+.titles{
+    grid-column: 2;
+    margin-top: 3%;
+    color:rgb(0, 106, 90);
+    justify-items: center;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-size: 20px;
+    font-weight: 800;
 
 }
