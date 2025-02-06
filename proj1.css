@@ -28,12 +28,41 @@ body, html{
 .sketchbox{
     position: relative; 
     background-color: white;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center; 
+
+    height: 100%;
     margin-right: 22%;
     padding: 3% 0; 
-
     margin-left: 22%;
-    
 }
+
+#sketchbox{
+    position: relative;
+    display: block;
+    width: 400px;
+    height: 400px;
+}
+
+#sketchbox2{
+    width: 600px;
+    height: 600px;
+}
+
+#sketchbox3{
+    width: 400px;
+    height: 600px;
+
+}
+
+#sketchbox4{
+    width: 600px;
+    height: 400px;
+
+}
+
+
+
+
