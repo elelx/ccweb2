@@ -1,0 +1,40 @@
+#text1{
+    color: rgb(254, 79, 108);
+
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+#title{
+
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-size: 25px;
+}
+
+body, html{
+    height: 100%; 
+    margin: 0;
+    background-image: url(img/bg3.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.sketchbox{
+    position: relative; 
+
+
+
+
+    background-color: white;
+    height: 100%;
+    justify-content: center;
+    align-items: center; 
+    padding: 3% 10%; 
+    margin-right: 22%;
+    margin-left: 22%;
+    
+}
