@@ -9,7 +9,7 @@ html, body{
     scroll-behavior: smooth; 
 
 }
-
+/* 
 .radishContain{
     grid-template-columns: 50% 50%;
 }
@@ -17,4 +17,24 @@ html, body{
 #radish{
     grid-column: 1;
     height:600px;
+} */
+
+.nav{
+ 
+    grid-template-columns: 50% 50%;
+
+}
+
+.menu
+{
+    list-style: none;
+    background-color: white;
+    width: 25%;
+
+    display: flex;
+    justify-content: left;
+    align-items: left; 
+
+    padding: 0 15px;
+
 }
