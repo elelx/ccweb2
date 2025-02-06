@@ -163,6 +163,12 @@ html, body{
         justify-items:center;
         padding: 3px;
     }
+    .projectssem2 img
+    {
+        height: auto;
+        justify-items:center;
+        padding: 3px;
+    }
     .navbar{
         margin-bottom: 10%;
     }
