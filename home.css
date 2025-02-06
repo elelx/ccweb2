@@ -78,12 +78,29 @@ html, body{
 
 
 .intro{
+    margin-top: 3%;
     font-size: 80px;
     justify-items: center;
     font-family: "Montserrat", serif;
     font-optical-sizing: auto;
     font-weight: 800;
     color: rgb(0, 106, 90);
+}
+
+#sub4{
+    width: 380px; 
+    height: 500px; 
+    background-image: url("photos/ProR.png"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+}
+
+#sub4:hover{
+    background-image: url("photos/ProRa.png");
+ 
 }
 
 .titles{
