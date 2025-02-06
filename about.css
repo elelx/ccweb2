@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+html, body{
+    cursor:url('photos/worm.png'), auto;
+    background: aquamarine;
+    scroll-behavior: smooth; 
+
+}
+
+.title{
+    text-align: center;
+
+}
+
+#name{
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+
+    font-weight: 800;
+    font-size: 30px;
+}
+#subName{
+    font-weight: 600;
+    font-size: 25px;
+    color: rgb(63, 161, 128);
+}
+.about{
+    text-align: center;
+}
+
+.aboutContainer{
+    background-color: white;
+    height: 100vh;
+    justify-content: center;
+    align-items: center; 
+    padding: 20px 15px; 
+    margin-right: 20%;
+    margin-left: 20%;
+
+}
