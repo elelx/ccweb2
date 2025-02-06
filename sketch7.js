@@ -153,7 +153,8 @@ function preload(){
   manSpray = loadImage('Images/ManSpray.png');
   manSwat = loadImage('Images/ManSwat.png');
   cockraoch = loadImage('Images/CockRoach.png');
-  roach = loadImage('Images/Roach.png'); roachImage = loadImage('Images/Roach.png');
+  roach = loadImage('Images/Roach.png'); 
+  roachImage = loadImage('Images/Roach.png');
   blood = loadImage('Images/blood.png');
   intro = loadImage('Images/intro.jpg');
   shocktext = loadImage('Images/ShockBubble.png');
@@ -207,9 +208,9 @@ function preload(){
 
   //-------- music
  squishSound = loadSound('Audio/cartoon-slap-2-189831.mp3');
-bgmusic = loadSound('Audio/Rugrats Theme [8 Bit Tribute to Rugrats] - 8 Bit Universe.mp3');
+bgmusic = loadSound('Audio/Rugrats 8 Bit Universe.mp3');
   buttonClick = loadSound('Audio/button-124476.mp3');
-  winScene = loadSound('Audio/Cartoon Sound Effects 100% Best 061.wav');
+  winScene = loadSound('Audio/Cartoon61.wav');
   ewSound = loadSound('Audio/Crowd of Children Saying Eww.mp3')
   kissSound = loadSound('Audio/kisspop3wav-14505.mp3')
 }
