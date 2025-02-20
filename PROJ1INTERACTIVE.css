@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* /* border: 1px solid red;  */
+}
+
+html, body{
+    cursor:url('photos/worm.png'), auto;
+    background: aquamarine;
+    scroll-behavior: smooth; 
+
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+
+/* CHALLENGES LIST AREA */
+.challenges a{
+
+
+    text-decoration: none;
+    color: rgb(0, 160, 112)  !important;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-size: 25px;
+    
+    text-align: center;
+}
+
+.challenges a:hover{
+
+    color: rgb(0, 46, 32) !important;
+}
+
+.challenges ul{
+    list-style: none;
+    display: inline;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+/* PROTOTYPES LIST AREA */
+.prototypes a{
+    text-decoration: none;
+    color: rgb(0, 160, 112) !important;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-size: 25px;
+    
+    text-align: center;
+}
+.prototypes ul{
+    list-style: none;
+    display: inline;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+.prototypes a:hover{
+    color: rgb(0, 62, 43) !important;
+
+}
+
+/*TITLE FORMAT*/
+#title{
+
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-size: 50px;
+
+    margin: 20px;
+
+}
+
+#title:hover{
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+/*MAKING SCREEN SMALLER*/
+@media screen and (max-width: 1000px){
+    .challenges ul{
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+    .challenges a{
+        font-size: 20px;
+
+    }
+
+}
