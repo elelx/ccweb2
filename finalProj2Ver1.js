@@ -23,7 +23,7 @@ function preload(){
 }
 
 function setup(){
-    createCanvas(600,600).parent(mySkethc); 
+    createCanvas(600,600);
 
     pointArray = myFont.textToPoints(ourletter, x, y, 100, { sampleFactor: 0.2 });
    
