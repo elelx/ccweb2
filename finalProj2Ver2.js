@@ -17,7 +17,7 @@ function preload(){
 }
 
 function setup(){
-    createCanvas(600,600).parent(mySkethc); 
+    createCanvas(600,600);
 
     pointArray =  myFont.textToPoints(
         ourWord, 
@@ -32,10 +32,15 @@ function draw(){
     background(backCol);
 
     if (mouseY <= 200) {
-        fill("white");
-        backCol = color(random(0, 255), random(0, 255), random(0, 255));
-    } else {
         fill(random(0, 200), random(100, 150), random(50, 100));
+
+
+        // backCol = color(random(0, 255), random(0, 255), random(0, 255));
+    } else {
+        fill("white");
+
+        backCol = color(random(0, 255), random(0, 255), random(0, 255));
+
     }
 
 

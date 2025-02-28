@@ -12,6 +12,8 @@ let rows = 6;
 let spaceX = 140; 
 let spaceY = 60; 
 
+let color = "black"
+
 backgroundColor = "black";
 
 function preload() { 
@@ -45,12 +47,17 @@ function draw() {
             let d = dist(mouseX, mouseY, points[j].x, points[j].y);
 
             if (d < 50) {
-                size = 3; 
+                size = random(3,5); 
                 fill("white");
             } else {
-                size = 3;
-                fill("black");
+                size = random(3, 8);
+                 fill(color);
             }
+
+            if(key === "w"){
+                fill("pink");
+            }
+         
 
             circle(points[j].x, points[j].y, size);
         }
@@ -60,6 +67,8 @@ function draw() {
 function keyPressed(){
     if (key === "w"){
         backgroundColor = ("white");
+        // color = ("grey");
+
     }
     if(key ==="d"){
         backgroundColor = ("black");
