@@ -1,22 +1,23 @@
+
 let myFont;
 
-let pointArray;
+// let pointArray;
+// let size = 5;
 
-let size = 5;
+// let ourletter = "crash"; 
 
-let ourletter = "crash"; 
+// // let x = 50; // the x of the bounce
+// let y = 330;//y of the bounce
 
-let x = 50; // the x of the bounce
-
-let y = 330;//y of the bounce
-
-let xspeed = 10; //the speeds
-let yspeed = 25;
+// let xspeed = 10; //the speeds
+// let yspeed = 25;
 
 // let backCol = ("#900C3F");
-let wordCol = ("#FF5733");
 
-// let crashInwAlls;
+let crashInwAlls;
+
+
+let wordCol = ("#FF5733");
 
 function preload(){ 
     myFont = loadFont("RubikGlitch.ttf");
@@ -24,55 +25,69 @@ function preload(){
 
 function setup(){
     createCanvas(600,600);
-
-    pointArray = myFont.textToPoints(ourletter, x, y, 100, { sampleFactor: 0.2 });
-   
-
+    crashInwAlls = new CrashInwAlls("crash", 50, 330, 10, 25, 5); 
     noStroke();
 }
 
 function draw(){
     // background("black");
-
-    Points(pointArray);
-   
-
-    x+= xspeed;
-    y+= yspeed;
-
-    if(x>width || x<0){ //if it hits the borders --> changes bg, shape color and size
-        xspeed *=-1;
-    
-        // backCol = color(random(0, 205), random(0, 65), random(0, 45)); //this changes the random colors everytime
-        wordCol = color(random(0, 100), random(0, 165), random(0, 245));
-        size = 20;
-    }
- 
-    if(y>height || y<0){
-        yspeed *=-1;
-        // backCol = color(random(0, 255), random(0, 255), random(0, 255));
-        wordCol = color(random(0, 100), random(0, 165), random(0, 245));
-        size = 5;
-    }
-
-    pointArray = myFont.textToPoints(ourletter, x, y, 100, { sampleFactor: 0.2 });
-
-
+    crashInwAlls.update(); //fot they calss
+    crashInwAlls.display(); //to shwo
 }
 
-function Points(points) {
+class CrashInwAlls {
+    constructor(text, x, y, xspeed, yspeed, size) {
+        this.text = text;
+        this.x = x;
 
+        this.y = y;
+        this.xspeed = xspeed;
 
-    for (let i = 0; i < points.length; i++) {
-        fill(wordCol); 
-        circle(points[i].x, points[i].y, size);
+        this.yspeed = yspeed;
+        this.size = size;
+        this.wordCol = color("#FF5733");
+        
+        this.updatethePoints();
     }
 
+    updatethePoints() {
+        this.pointArray = myFont.textToPoints(this.text, this.x, this.y, 100, { sampleFactor: 0.2 });
+    }
+
+    update() {
+        this.x += this.xspeed;
+        this.y += this.yspeed;
+
+        if (this.x > width || this.x < 0) { // If it hits the borders --> changes color and size
+            this.xspeed *= -1;
+
+          //this.wordCol = color("red");
+
+            this.wordCol = color(random(0, 100), random(0, 165), random(0, 245));
+            this.size = 20;
+        }
+
+        if (this.y > height || this.y < 0) {
+            this.yspeed *= -1;
+
+
+            this.wordCol = color(random(0, 100), random(0, 165), random(0, 245));
+            this.size = 5;
+        }
+        this.updatethePoints();
+    }
+
+    display() {
+        for (let i = 0; i < this.pointArray.length; i++) {
+            fill(this.wordCol);
+            circle(this.pointArray[i].x, this.pointArray[i].y, this.size);
+        }
+    }
 }
 
-function keyPressed(){ //this is bascially just fake erasing the screen
-    if (key =="c"){
+function keyPressed() { // This is basically just fake erasing the screen
+    if (key == "c") {
         background("white");
     }
 }
-//https://www.youtube.com/watch?v=eHZXvR6NDLo refrencehd this video
+//https://www.youtube.com/watch?v=eHZXvR6NDLo referenced this video

@@ -30,9 +30,9 @@ function setup() {
             let x = col * spaceX + 60; //placement
             let y = row * spaceY + 160; 
 
-            let points = myFont.textToPoints(ourWord, x, y, 60, { sampleFactor: 0.2 });
+            pointArrays.push( new textToPoints(ourWord, x, y, 60));
            
-            pointArrays.push(points);
+
         }
     }
 }
@@ -43,25 +43,53 @@ function draw() {
     for (let i = 0; i < pointArrays.length; i++) {
         let points = pointArrays[i];
 
-        for (let j = 0; j < points.length; j++) {
-            let d = dist(mouseX, mouseY, points[j].x, points[j].y);
+        points.display();
+        // for (let j = 0; j < points.length; j++) {
+        //     let d = dist(mouseX, mouseY, points[j].x, points[j].y);
 
-            if (d < 50) {
-                size = random(3,5); 
-                fill("white");
-            } else {
-                size = random(3, 8);
-                 fill(color);
-            }
+        //     if (d < 50) {
+        //         size = random(3,5); 
+        //         fill("white");
+        //     } else {
+        //         size = random(3, 8);
+        //          fill(color);
+        //     }
 
-            if(key === "w"){
-                fill("pink");
-            }
+        //     if(key === "w"){
+        //         fill("pink");
+        //     }
          
 
-            circle(points[j].x, points[j].y, size);
+        //     circle(points[j].x, points[j].y, size);
+        // }
+    }
+}
+
+class textToPoints{
+    constructor(word, x, y, size){
+        this.points = myFont.textToPoints(word, x, y, size, { sampleFactor: 0.2 });
+    }
+
+    display() {
+        for (let pt of this.points) {
+            let d = dist(mouseX, mouseY, pt.x, pt.y);
+
+            if (d < 50) {
+                fill("white");
+                size = random(3,5);
+            } else {
+                fill(color);
+                size = random(3, 8);
+            }
+
+            if (key === "w") {
+                fill("pink");
+            }
+
+            circle(pt.x, pt.y, size);
         }
     }
+
 }
 
 function keyPressed(){
