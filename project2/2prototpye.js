@@ -20,18 +20,19 @@ let savePic;
 
 
 function preload() {
-  earsImage = loadImage('project2/ears.png');
+  earsImage = loadImage('ears.png');
 
-  images.push(loadImage('project2/007.png')); 
-  images.push(loadImage('project2/094.webp')); 
+  images.push(loadImage('007.png')); 
+  images.push(loadImage('094.webp')); 
 
   //audio---------
-  zeepzorp =loadSound('project2/green alien cat says yaer aegh erya.mp3');
+  zeepzorp =loadSound('green alien cat says yaer aegh erya.mp3');
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   noStroke();
+  createCanvas(640, 480);
 
   capture = createCapture(VIDEO, {flipped:true}, onCaptureCreated);
   capture.hide();
@@ -62,7 +63,7 @@ function setup() {
 }
 
 function onCaptureCreated(){
-  capture.size = (capture.width, capture.height); 
+  capture.size(capture.width, capture.height); 
 
   tracker.start(capture.elt); 
   hasInitialized = true;
@@ -90,6 +91,7 @@ function draw() {
 
   image(capture, 0,0);
 
+  //this is if u take a pic then your pokemon will be on top of the picture you took, on the side ony you
   if(picture){
     push();
     image(picture, 0, 50, capture.width/2, capture.height/2);
@@ -111,7 +113,7 @@ pop();
 
 function clearScreen(){
   picture = null;//clears
-  currentImage = null; //reset image
+  currentImage = null; //reset 
   clearbutton.hide();
   clear();
 }
