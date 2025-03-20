@@ -22,8 +22,20 @@ let savePic;
 function preload() {
   earsImage = loadImage('ears.png');
 
-  images.push(loadImage('007.png')); 
-  images.push(loadImage('094.webp')); 
+  images.push(loadImage('bulbsa.png')); 
+  images.push(loadImage('crab.png')); 
+  images.push(loadImage('gobou.png')); 
+  images.push(loadImage('hippopotas.png')); 
+  images.push(loadImage('mankey.png')); 
+  images.push(loadImage('miaouss.png')); 
+  images.push(loadImage('pika.png')); 
+  images.push(loadImage('qwilfish.png')); 
+  images.push(loadImage('ramoloss.png')); 
+  images.push(loadImage('rattatac.png')); 
+  images.push(loadImage('salameche.png')); 
+  images.push(loadImage('smogo.png')); 
+  images.push(loadImage('snor.png')); 
+
 
   //audio---------
   zeepzorp =loadSound('green alien cat says yaer aegh erya.mp3');
@@ -73,7 +85,7 @@ function takePicture() {
   // Take pic of the live vid
   picture = capture.get();
 
-  // Choose a random image from the array
+  // Choose a random image 
   let randomIndex = floor(random(images.length)); 
 
   currentImage = images[randomIndex]; // the random image
@@ -94,8 +106,9 @@ function draw() {
   //this is if u take a pic then your pokemon will be on top of the picture you took, on the side ony you
   if(picture){
     push();
-    image(picture, 0, 50, capture.width/2, capture.height/2);
-    image(currentImage,0,50, capture.width/2, capture.height/2);
+    image(picture, 0, 50, capture.width/2, capture.height/2);//this take pics of live feed of ur face , can // this if js wan pokemon (maybe mmayybe)
+    image(currentImage,0,50, capture.width/2, capture.height/2); 
+
 
     text("this is your pokemon", 100, 50);
     textSize(400);
@@ -175,3 +188,4 @@ function takePic(){
 }
 
 //do if mapped is > distnace ( like nose or ehebrow) --> you are this pokemon different Pokémon image when a user smiles or makes a funny face. 
+//https://www.pokekalos.fr/jeux/mobile/rumblerush/pokedex/index.html poke web pics
