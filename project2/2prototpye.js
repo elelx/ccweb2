@@ -169,6 +169,12 @@ function drawMouth() {
     textSize(10);
     // text("😱", botxPos, botyPos);
 
+    picture = capture.get();
+
+  // // Choose a random image 
+  // let randomIndex = floor(random(images.length)); 
+
+  // currentImage = images[randomIndex]; // the random image
 
     if(!zeepzorp.isPlaying()){
     zeepzorp.play();
