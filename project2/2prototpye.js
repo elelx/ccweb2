@@ -21,11 +21,11 @@ let savePic;
 let cuteFont;
 let secondFont;
 
-// let backpic;
-
+//seagull stuff
 let pigeonHead;
 let pigeonpic;
 let showPigeon = false;
+
 
 function preload() {
   //font ----------
@@ -63,7 +63,6 @@ function setup() {
   capture = createCapture(VIDEO, {flipped:true}, onCaptureCreated);
   capture.hide();
 
-  //    for centering
 
   tracker = new clm.tracker();
   tracker.init(); //initialize
@@ -82,15 +81,15 @@ function setup() {
     clearbutton.hide();
 
 
-    //save pic
+    //save pic ------
     savePic = createButton('let me save this whole screen!');
     savePic.mousePressed(takePic);
     savePic.position(windowWidth / 2 - savePic.width / 2, 640); //beczu oringnallty its at the top left corner so this helps it be at centerceneter 
 
-//button for pigeon head
-    let pigeonButton = createButton("pigeon head"); 
+//button for seagull head
+    let pigeonButton = createButton("seagull head"); 
     pigeonButton.position(950, 100);
-    pigeonButton.mousePressed(togglePigeonHead);
+    pigeonButton.mousePressed(PigeonHead);
 
 }
 
@@ -101,7 +100,7 @@ function onCaptureCreated(){
   hasInitialized = true;
 }
 
-function togglePigeonHead() {
+function PigeonHead() {
   showPigeon = !showPigeon; // Toggle pigeon head on/off
 }
 
@@ -141,7 +140,7 @@ function draw() {
 
     // this is if the pokemon buton is pressed, this is when the picture of u n the pokemon appears
   if(picture){
-    image(picture, 40, 150, capture.width/2, capture.height/2);
+    image(picture, 40, 150, capture.width/2, capture.height/2); //love feed
     image(currentImage,40, 400, capture.width/2, capture.height/2); //pokemon
     
     push();
@@ -163,13 +162,13 @@ function draw() {
   // drawPigeonHead();
 
   if (showPigeon) {
-    drawPigeonHead(); // Ensures it stays visible while toggled on
+    drawPigeonHead(); //  it stays on
 }
 }
 
 function drawPigeonHead() {
 
-  const topxPos = capture.width - positions[0][0];
+  const topxPos = capture.width - positions[0][0]; //left ear
   const topyPos = positions[0][1];
 
   // const botxPos = capture.width - positions[41][0];
@@ -193,8 +192,8 @@ function takePictureforPokemon() {
 
 
 function clearScreen(){
-  picture = null;//clears
-  currentImage = null; //reset image
+  picture = null;//clears the pokemon n picture
+
   clearbutton.hide();
   clear();
 }
@@ -219,6 +218,8 @@ function drawMouth() {
 
     push(); //this is so only my live feed is green :3
     tint('green');
+
+    //only the live feed is effected by tint
     image(capture, width / 2 - capture.width / 2, height / 2 - capture.height / 2);
 
     pop();
@@ -226,15 +227,16 @@ function drawMouth() {
     drawHead();
 
 } else {
-    zeepzorp.pause();
+    zeepzorp.pause(); //audio stop
     noTint();
 
 }
 }
 
 
-function drawHead() {
-  const videoX = width / 2 - capture.width / 2;
+function drawHead() { // had helop here becaue i couldnt center it
+
+const videoX = width / 2 - capture.width / 2; //centering the feeeed
 const videoY = height / 2 - capture.height / 2;
 
 const topxPos = videoX + (capture.width - positions[33][0]); // Nose x
