@@ -101,7 +101,7 @@ function onCaptureCreated(){
 }
 
 function PigeonHead() {
-  showPigeon = !showPigeon; // Toggle pigeon head on/off
+  showPigeon = !showPigeon; // Toggle the seaagulll head on/off
 }
 
 function draw() {
@@ -152,20 +152,20 @@ function draw() {
     pop();
   }
 
- 
-
   positions = tracker.getCurrentPosition();
 
   if(!positions) return;
 
+  //seagulls[--------------------------------------]
   drawMouth();
   // drawPigeonHead();
 
-  if (showPigeon) {
+  if (showPigeon) { //if seagull on face then 
     drawPigeonHead(); //  it stays on
 }
 }
 
+//seaguls----------------------------
 function drawPigeonHead() {
 
   const topxPos = capture.width - positions[0][0]; //left ear
@@ -177,6 +177,9 @@ function drawPigeonHead() {
 
   image(pigeonpic, topxPos, topyPos, 600, 300);
 }
+
+
+//pokemon----------------------------
 
 function takePictureforPokemon() {
   // Take pic of the live vid
@@ -198,7 +201,7 @@ function clearScreen(){
   clear();
 }
 
-
+//alien tints and sound--------------------
 function drawMouth() {
   const topxPos = capture.width - positions[60][0];  // Top of mouth
   const topyPos = positions[60][1];
@@ -234,6 +237,8 @@ function drawMouth() {
 }
 
 
+//alien ears-------------------
+
 function drawHead() { // had helop here becaue i couldnt center it
 
 const videoX = width / 2 - capture.width / 2; //centering the feeeed
@@ -249,6 +254,8 @@ const Size = 200; // Ear image size
 image(earsImage, topxPos - Size / 2, headY - Size, Size, Size);
 
 }
+
+//saving thr ehoele canavas
 
 function takePic(){
   saveCanvas('MyBeautifulPicture', 'jpg'); // 2nd is the file name
