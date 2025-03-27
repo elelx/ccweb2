@@ -127,10 +127,12 @@ function draw() {
   textSize(35);
   text("open your mouth ", 1130, 320);
   text("to become an alien", 1120, 380);
+  text("unleash ur alien !", 1124, 430);
 
-  text("or have a", 1200, 70)
-  text("seagull on your", 1200, 100);
-  text("head", 1200, 140);
+
+  text("or have a", 1225, 70)
+  text("seagull on your", 1225, 100);
+  text("head", 1225, 140);
 
   pop();
 
