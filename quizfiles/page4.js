@@ -11,8 +11,6 @@ const favcolor = localStorage.getItem("NextPageColor");
 if (favcolor) {
 
     document.body.style.backgroundColor = favcolor;  
-
-
 }
 
 
