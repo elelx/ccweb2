@@ -54,8 +54,8 @@ button.addEventListener("click", function() {
 
 
   // me local sotry for resukts 
-  let savedResult = localStorage.getItem("QuizResult");
+  let savedResult = localStorage.getItem("Results");
 if (savedResult) {
-    document.getElementById("result").textContent = "Your result: " + savedResult;
+    document.getElementById("result").textContent = "fishy fishy: " + savedResult;
 }
 
