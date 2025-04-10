@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototpe</title>
+</head>
+<body>
+
+ <form id="fish questions">
+
+<!----------- 1------------ -->
+     <h3>1. If I were a sea creature, I would want to live in _____ </h3>
+
+     <!--inout type : radio(1 ans). ... id ...name.(group).. value  id and label needs to match 2 work -->
+
+
+        <input type="radio" id="Hot" name="q1" value="A">
+        <label for="Hot">Hot water that is near the sun..</label> <br>
+
+        <input type="radio" id="Cold" name="q1" value="B">
+        <label for="Cold">Cold water that is deep in the ocean where there is no light.. </label> <br>
+
+        <input type="radio" id="Meh" name="q1" value="C">
+        <label for="Meh"> whatever. it doesn't really matter, as long as I am in the water it's okay </label> <br>
+
+
+<!----------- 2 ----------->
+     <h3>2. Do you like being prey or predator? </h3>
+
+        <input type="radio" id="Prey" name="q2" value="A">
+        <label for="Prey">Prey....I don't really like going out </label><br>
+
+        <input type="radio" id="Predator" name="q2" value="B">
+        <label for="Predator">Predator... I like to terrorize humans and fish </label><br>
+
+
+<!-----------------3------------->
+
+<h3>3. If I was sea creature, my skin color would be </h3>
+
+        <input type="radio" id="pink" name="q3" value="A">
+        <label for="pink"> pink </label><br>
+
+        <input type="radio" id="blue" name="q3" value="B">
+        <label for="blue"> blue </label><br>
+
+        <input type="radio" id="red" name="q3" value="C">
+        <label for="red"> red </label><br>
+
+        <input type="radio" id="BW" name="q3" value="D">
+        <label for="BW"> black and white </label><br>
+
+
+<!-----4 ------------------->
+
+<h3>  4. my skin would be nice and _____ </h3>
+    <input  type  = "radio" id ="rough" name ="q4" value = "A">
+    <label for="rough"> rough </label><br>
+
+    <input  type  = "radio" id ="smooth" name ="q4" value = "B">
+    <label for="smooth"> smooth </label><br>
+
+
+
+
+        <button type="button" onclick="evaluateQuiz()">Submit</button>
+    </form>
+
+    <p id="result"></p>
+
+    <p id="colorDisplay"></p>
+
+
+    <script src = "page2.js"></script>
+</body>
+</html>
