@@ -1,4 +1,4 @@
-let favcolor = ''; //  variable to store my color
+let favcolor = ''; //  variable to store me color
 
 
 
@@ -8,7 +8,7 @@ document.getElementById("Pink").addEventListener("click", function() {
     // this is basically saying, if hthe picture with the Id of Pink is clicked then this will happen
 
     favcolor = "pink"; // Set the selected color
-    saveColor(); // the function to save and navigate to the next page
+    saveColor(); //  function to save nxt page
 });
 
 document.getElementById("green").addEventListener("click", function() {
@@ -36,7 +36,7 @@ document.getElementById("blue").addEventListener("click", function() {
 
 function saveColor() {
     if (favcolor) {
-        localStorage.setItem("NextPageColor", favcolor); //save to localStorage
+        localStorage.setItem("NextPageColor", favcolor); //save to localStorage key : value
         window.location.href = "page2.html"; // goes ro next page 
     }
 }

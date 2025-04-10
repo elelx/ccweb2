@@ -1,9 +1,19 @@
 const button = document.getElementById("startButton"); //i store me button in varibale
 
 //buttons 
-let runawyTracker = 0; //bascially trcking hw many rimes i hovered
+let runawyTracker = 0; //vars bascially trcking hw many rimes i hovered
 
 const finalTrack = 5; //bascially after 5 times it triggers me final action
+
+
+const favcolor = localStorage.getItem("NextPageColor");
+
+if (favcolor) {
+
+    document.body.style.backgroundColor = favcolor;  
+
+
+}
 
 
 button.addEventListener("mouseover", function() {
@@ -12,7 +22,6 @@ button.addEventListener("mouseover", function() {
     if(runawyTracker<finalTrack){
         runawyTracker ++; //add 1
 
-            //  console.log("boom boom");
 
 // so button doesnt go off screen -------------
 
@@ -42,4 +51,11 @@ button.addEventListener("click", function() {
         window.location.href = "quizPrototype.html";
     }
   });
+
+
+  // me local sotry for resukts 
+  let savedResult = localStorage.getItem("QuizResult");
+if (savedResult) {
+    document.getElementById("result").textContent = "Your result: " + savedResult;
+}
 

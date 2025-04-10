@@ -10,7 +10,7 @@ if (favcolor) {
 }
 
 
-function evaluateQuiz() {
+function answer() {
     let answers = [];
 
     // Question 1
@@ -38,8 +38,14 @@ function evaluateQuiz() {
 
 
     // results
-    let result = getFinalResult(answers);
-    document.getElementById("result").textContent = "Your result: " + result;
+    let result = getFinalResult(answers); // ze ansewrs r a cpmbp of arrays 
+
+    //me local stprage
+    localStorage.setItem("Results", result);
+
+
+    //shows in the text id -
+    document.getElementById("result").textContent = "You are aaaa : " + result;
 }
 
 
