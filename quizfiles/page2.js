@@ -73,7 +73,7 @@ function getFinalResult(answers) {
  
 // pred + hot water ------------------------
 
-    //rough 
+    //rough ---> roughskin dogfish + sunfish
         "ABAA": "9",  //pink    
         "ABBA": "11", //blue 
 
@@ -89,14 +89,15 @@ function getFinalResult(answers) {
  
 // prey + cold water ---------------
 
-    //rough
+    //rough  --> Crabs + Blobfish
         "BAAA": "17", //pink
         "BABA": "19", //blue
 
         "BACA": "21",  //red
         "BADA": "23", //b+w
 
-    //smooth 
+    //smooth  //--> plankton + snailfish 
+
         "BAAB": "18", //pink
         "BABB": "20", //blue
 
@@ -104,8 +105,8 @@ function getFinalResult(answers) {
         "BADB": "24", //b+w
 
  //pred + cold water --------------------
-    //rough  -->
 
+    //rough  --> orcas  + Walrus
         "BBAA": "25", //pink
         "BBBA": "27", //blue
 
@@ -113,8 +114,7 @@ function getFinalResult(answers) {
         "BBDA": "31", //b+w
 
 
-
-    //smooth --> seals 
+    //smooth --> seals +  giant squid
 
         "BBAB": "26", //pink
         "BBBB": "28", //blue
@@ -124,7 +124,7 @@ function getFinalResult(answers) {
 
 // prey + weirdo water ---------------
 
-    //rough
+    //rough --> lump sucker  +  starfish
 
         "CAAA": "33", //pink
         "CABA": "35", //blue
@@ -132,7 +132,8 @@ function getFinalResult(answers) {
         "CACA": "37",  //red
         "CADA": "39", //b+w
 
-    //smooth
+    //smooth --> puffer fish  +  sardine
+
         "CAAB": "34", //pink
         "CABB": "36", //blue
 
@@ -141,7 +142,7 @@ function getFinalResult(answers) {
 
  //pred + weirdo water ---------------------
         
-    //rough
+    //rough --> angler fish + goblin shark
         "CBAA": "41", //pink
         "CBBA": "43", //blue
 
@@ -149,8 +150,8 @@ function getFinalResult(answers) {
         "CBDA": "47",  //b+w
 
 
-    //smooth
-
+    //smooth -->  goblin shark + dolphions
+ 
         "CBAB": "42", //pink
         "CBBB": "44", //blue
 
