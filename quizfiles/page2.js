@@ -55,7 +55,7 @@ function getFinalResult(answers) {
 
 // prey + hot wter  -----------------
 
-    //rough 
+    //rough --> cat fish + large mouth bass
 
         "AAAA": "1", //pink   
         "AABA": "3", //blue    
@@ -64,7 +64,7 @@ function getFinalResult(answers) {
         "AADA": "7", //b+w      
 
 
-    //smooth   --> jellyfish
+    //smooth   --> jellyfish + clown fish
         "AAAB": "2", //pink
         "AABB": "4", //blue
 
@@ -73,14 +73,14 @@ function getFinalResult(answers) {
  
 // pred + hot water ------------------------
 
-    //rough
+    //rough 
         "ABAA": "9",  //pink    
         "ABBA": "11", //blue 
 
         "ABCA": "13", //red    
         "ABDA": "15", //b+w     
 
-    //smooth --> sharks
+    //smooth --> sharks + sword fish
         "ABAB": "10", //pink
         "ABBB": "12", //blue
 
@@ -105,7 +105,7 @@ function getFinalResult(answers) {
 
  //pred + cold water --------------------
     //rough  -->
-    
+
         "BBAA": "25", //pink
         "BBBA": "27", //blue
 
