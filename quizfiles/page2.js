@@ -47,6 +47,23 @@ function answer() {
 
     //shows in the text id -
     document.getElementById("result").textContent = "You are aaaa : " + result;
+
+
+     // Show image result if it's a valid image path
+     if (result.endsWith(".jpg") || result.endsWith(".png") || result.endsWith(".jpeg") || result.endsWith(".gif")) {
+        let img = document.createElement('img');
+        img.src = result;
+        img.alt = "Your fish result";
+        img.width = 300;
+
+        let resultDiv = document.getElementById("result");
+        let existingImg = resultDiv.querySelector('img');
+        if (existingImg) {
+            resultDiv.removeChild(existingImg);
+        }
+
+        resultDiv.appendChild(img);
+    }
 }
 
 
@@ -57,106 +74,106 @@ function getFinalResult(answers) {
 
     //rough --> cat fish + large mouth bass
 
-        "AAAA": "1", //pink   
-        "AABA": "3", //blue    
+        "AAAA": "../fishImages/1.jpg", //pink   
+        "AABA": "../fishImages/3.jpg", //blue    
 
-        "AACA": "5",  //red   
-        "AADA": "7", //b+w      
+        "AACA": "../fishImages/5.jpg",  //red   
+        "AADA": "../fishImages/7.jpg", //b+w      
 
 
     //smooth   --> jellyfish + clown fish
-        "AAAB": "2", //pink
-        "AABB": "4", //blue
+        "AAAB": "../fishImages/2.jpg", //pink
+        "AABB": "../fishImages/4.jpg", //blue
 
-        "AACB": "6",  //red
-        "AADB": "8", //b+w
+        "AACB": "../fishImages/6.jpg",  //red
+        "AADB": "../fishImages/8.jpg", //b+w
  
 // pred + hot water ------------------------
 
     //rough ---> roughskin dogfish + sunfish
-        "ABAA": "9",  //pink    
-        "ABBA": "11", //blue 
+        "ABAA": "../fishImages/9.jpg",  //pink    
+        "ABBA": "../fishImages/11.jpg", //blue 
 
-        "ABCA": "13", //red    
-        "ABDA": "15", //b+w     
+        "ABCA": "../fishImages/13.jpg", //red    
+        "ABDA": "../fishImages/15.jpg", //b+w     
 
     //smooth --> sharks + sword fish
-        "ABAB": "10", //pink
-        "ABBB": "12", //blue
+        "ABAB": "../fishImages/10.jpg", //pink
+        "ABBB": "../fishImages/12.jpg", //blue
 
-        "ABCB": "14", //red
-        "ABDB": "16", //b+w
+        "ABCB": "../fishImages/14.jpg", //red
+        "ABDB": "../fishImages/16.jpg", //b+w
  
 // prey + cold water ---------------
 
     //rough  --> Crabs + Blobfish
-        "BAAA": "17", //pink
-        "BABA": "19", //blue
+        "BAAA": "../fishImages/17.jpg", //pink
+        "BABA": "../fishImages/19.jpg", //blue
 
-        "BACA": "21",  //red
-        "BADA": "23", //b+w
+        "BACA": "../fishImages/21.jpg",  //red
+        "BADA": "../fishImages/23.jpg", //b+w
 
     //smooth  //--> plankton + snailfish 
 
-        "BAAB": "18", //pink
-        "BABB": "20", //blue
+        "BAAB": "../fishImages/18.png", //pink
+        "BABB": "../fishImages/20.jpg", //blue
 
-        "BACB": "22", //red
-        "BADB": "24", //b+w
+        "BACB": "../fishImages/22.jpg", //red
+        "BADB": "../fishImages/24.jpg", //b+w
 
  //pred + cold water --------------------
 
     //rough  --> orcas  + Walrus
-        "BBAA": "25", //pink
-        "BBBA": "27", //blue
+        "BBAA": "../fishImages/25.png", //pink
+        "BBBA": "../fishImages/27.jpg", //blue
 
-        "BBCA": "29",  //red
-        "BBDA": "31", //b+w
+        "BBCA": "../fishImages/29.jpg",  //red
+        "BBDA": "../fishImages/31.jpg", //b+w
 
 
     //smooth --> seals +  giant squid
 
-        "BBAB": "26", //pink
-        "BBBB": "28", //blue
+        "BBAB": "../fishImages/26.jpg", //pink
+        "BBBB": "../fishImages/28.jpg", //blue
 
-        "BBCB": "30",  //red
-        "BBDB": "32", //b+w
+        "BBCB": "../fishImages/30.jpg",  //red
+        "BBDB": "../fishImages/32.jpg", //b+w
 
 // prey + weirdo water ---------------
 
     //rough --> lump sucker  +  starfish
 
-        "CAAA": "33", //pink
-        "CABA": "35", //blue
+        "CAAA": "../fishImages/33.jpg", //pink
+        "CABA": "../fishImages/35.jpg", //blue
 
-        "CACA": "37",  //red
-        "CADA": "39", //b+w
+        "CACA": "../fishImages/37.jpg",  //red
+        "CADA": "../fishImages/39.jpg", //b+w
 
     //smooth --> puffer fish  +  sardine
 
-        "CAAB": "34", //pink
-        "CABB": "36", //blue
+        "CAAB": "../fishImages/34.jpg", //pink
+        "CABB": "../fishImages/36.jpg", //blue
 
-        "CACB": "38",  //red
-        "CADB": "40", //b+w
+        "CACB": "../fishImages/38.jpg",  //red
+        "CADB": "../fishImages/40.jpg", //b+w
 
  //pred + weirdo water ---------------------
         
     //rough --> angler fish + goblin shark
-        "CBAA": "41", //pink
-        "CBBA": "43", //blue
+        "CBAA": "../fishImages/41.jpg", //pink
+        "CBBA": "../fishImages/43.jpg", //blue
 
-        "CBCA": "45", //red
-        "CBDA": "47",  //b+w
+        "CBCA": "../fishImages/45.jpg", //red
+        "CBDA": "../fishImages/47.jpg",  //b+w
 
 
     //smooth -->  dumbo octopus + 
  
-        "CBAB": "42", //pink
-        "CBBB": "44", //blue
+        "CBAB": "../fishImages/42.jpg", //pink
+        "CBBB": "../fishImages/44.jpg", //blue
 
-        "CBCB": "46",  //red
-        "CBDB": "48",  //b+w
+        "CBCB": "../fishImages/46.jpg",  //red
+        "CBDB": "../fishImages/48.jpg",  //b+w
     };
 
     let key = answers[0] + answers[1] + answers[2] + answers[3] ;
