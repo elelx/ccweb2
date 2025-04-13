@@ -150,7 +150,7 @@ function getFinalResult(answers) {
         "CBDA": "47",  //b+w
 
 
-    //smooth -->  goblin shark + dolphions
+    //smooth -->  dumbo octopus + 
  
         "CBAB": "42", //pink
         "CBBB": "44", //blue
