@@ -59,40 +59,40 @@ function getFinalResult(answers2) {
         //B = NF
         //C = dad
 
-        "AAA": "you like to make dad jokes alot", 
+        "AAA": "do u have a kid? why do u joke like a dad", 
         "AAB": "you like to make dad jokes alot", 
-        "AAC": "Are you a dad? Because it seems you like to makedad jokes alot",  
+        "AAC": "Are you a dad? Because it seems you like to make dad jokes alot",  
 
-        "ABA":"brain rot? ur so brain rot",
-        "ABB":"wow! so diverse! You're humor is so diverse",
+        "ABA":"brain rot? u r so brain rot, go touch grass",
+        "ABB":"wow! so diverse! so... quirky!",
         "ABC":" you like to make dad jokes alot ",
 
         "ACA":"Are you trying to be quirky?",
-        "ACB":"wow! so diverse! You're humor is so .. different",
+        "ACB":"wow! You're humor is so .. different",
         "ACC":"you like to make dad jokes alot",
 
 
-        "BAA":"brain rot? ur so brain rot",
-        "BAB":"wow! so diverse! You're humor is so diverse",
+        "BAA":"you tested for brain rot? ofc u did.",
+        "BAB":"You're humor is so different, you should have a stand up comedy show",
         "BAC":"you like to make dad jokes alot",
 
         "BBA":"Bruh you are 100% brain rot",
-        "BBB":"brain rot? ur so brain rot",
+        "BBB":"hello hello? u make brain jokes",
         "BBC":"brain rot? ur so brain rot",
 
         "BCA":"brain rot? ur so brain rot",
         "BCB":"You are not funny",
-        "BCC":"wow! so diverse! You're humor is so diverse",
+        "BCC":"You should start a stand up comedy show",
 
         "CBA":"brain rot? ur so brain rot",
         "CBB":"You are not funny",
-        "CBC":"wow! so diverse! You're humor is so diverse",
+        "CBC":"okay....different i guess",
 
-        "CAA":"wow! so diverse! You're humor is so diverse",
+        "CAA":"You're actually so funny....",
         "CAB":"You are not funny",
         "CAC":"you like to make dad jokes alot",
 
-        "CCA":"You are not funny",
+        "CCA":"you are so so funny!! .... NOT ",
         "CCB":"You're so not funny",
         "CCC":"You are not funny",
 
@@ -105,6 +105,6 @@ function getFinalResult(answers2) {
     if (resultsMap2[key]) {
         return resultsMap2[key];
     } else {
-        return "you have bruh humor";
+        return "you have bruh humor...retake it man";
     }
 }

@@ -39,6 +39,11 @@ button.addEventListener("mouseover", function() {
 
     }
 
+    if (runawyTracker === finalTrack) {
+      const img = button.querySelector("img");
+      img.src = "../tesphotos/shrimp3.png";
+    }      
+
 });
 
 // this is to change the page -----------------
@@ -56,7 +61,7 @@ button.addEventListener("click", function() {
 const savedResult = localStorage.getItem("Results");
 
   if (savedResult) {
-    const container = document.getElementById("resultContainer");
+    const container = document.getElementById("FishResults");
 
     if (
       savedResult.endsWith(".jpg") ||
@@ -77,7 +82,7 @@ const savedResult = localStorage.getItem("Results");
   const savedResult2 = localStorage.getItem("Results2");
 
   if(savedResult2){
-    const container = document.getElementById("resultContainer2");
+    const container = document.getElementById("HumorResults");
     container.textContent = savedResult2; // like "you are a bruh fish"
 
 

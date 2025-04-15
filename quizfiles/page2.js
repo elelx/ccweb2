@@ -91,8 +91,8 @@ function getFinalResult(answers) {
 // prey + cold water ---------------
 
     //rough  --> Crabs + Blobfish
-        "BAAA": " ../fishImages/18.png", //pink
-        "BABA": "../fishImages/20.jpg ", //blue
+        "BAAA": "../fishImages/18.png", //pink
+        "BABA": "../fishImages/20.jpg", //blue
 
         "BACA": "../fishImages/21.jpg",  //red
         "BADA": "../fishImages/23.jpg", //b+w
@@ -165,6 +165,6 @@ function getFinalResult(answers) {
     if (resultsMap[key]) {
         return resultsMap[key];
     } else {
-        return "you are a bruh fish";
+        return "you are a bruh fish.. go back and retake it u lozer ";
     }
 }
