@@ -1,22 +1,9 @@
 
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
-}
-
-body {
-
-    display: flex;
-    flex-direction: column; 
-
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-
-    position: relative;
 }
 
 .fish{
@@ -38,14 +25,17 @@ body {
     }
 }
 
+body{
+    display: flex;
+    flex-direction: column; 
 
-#button{
-    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
     position: relative;
-    
-    justify-content: right;
-    align-items: right;
 }
+
 
 #TITLE{
     font-family: "Montserrat", serif;
@@ -56,6 +46,7 @@ body {
     
 }
 
+
 .fish-questions{
 
     font-family: "Montserrat", serif;
@@ -64,12 +55,29 @@ body {
     font-weight: 600;
     
     line-height: 1.6;
+}
+
+.titles{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+#TheAnswers{
+    font-size: 15px;
+}
+
+#pics{
+    width:200px;
+}
+
+#pics1{
+    width:300px;
 
 }
 
-
-#questionTitles{
-    font-size: 30px;
+#pics2{
+    width:150px;
+    height:200px;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -80,7 +88,7 @@ body {
         font-size: 60px;
 
     }
-    #questionTitles{
+    .titles{
         transition: 1s;
         padding: 3%;
         font-size: 19px;
@@ -89,10 +97,25 @@ body {
     #TheAnswers{
         transition: 1s;
         margin-left: 3%;
-        font-size: 15px;
+        font-size: 12px;
     }
 
     #button{
         width: 500px;
+    }
+
+    #pics{
+        width: 140px;
+    }
+
+    #pics1{
+        width:100px;
+    }
+
+    #pics2{
+        width:100px;
+        height:130px;
+
+    
     }
 }

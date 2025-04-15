@@ -6,18 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>prototpe</title>
 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Lexend+Giga:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+
     <link rel="stylesheet" href="page2.css">
 </head>
 <body>
+    <div class = "fish"><img src = "../tesphotos/bones.png" width = "500px" height = "auto"></div>
 
- <form id="fish questions">
+
+    <div id = "backButton"><a href = "quizPrototype.html"> go back !</a> </div>
+    <div id = "TITLE">  SEA QUIZ </div>
+
+ <form class="fish-questions">
 
 <!----------- 1------------ -->
-     <h3>1. If I were a sea creature, I would want to live in _____ </h3>
+     <h3 id = "questionTitles">1. If I were a sea creature, I would want to live in  </h3>
 
      <!--inout type : radio(1 ans). ... id ...name.(group).. value  id and label needs to match 2 work -->
 
-
+    <div id = TheAnswers> 
         <input type="radio" id="Hot" name="q1" value="A">
         <label for="Hot">Hot water that is near the sun..</label> <br>
 
@@ -26,22 +37,27 @@
 
         <input type="radio" id="Meh" name="q1" value="C">
         <label for="Meh"> whatever. it doesn't really matter, as long as I am in the water it's okay </label> <br>
-
+    
+    </div>
 
 <!----------- 2 ----------->
-     <h3>2. Do you like being prey or predator? </h3>
+     <h3 id = "questionTitles">2. Do you like being prey or predator? </h3>
 
+
+    <div id = TheAnswers> 
         <input type="radio" id="Prey" name="q2" value="A">
         <label for="Prey">Prey....I don't really like going out </label><br>
 
         <input type="radio" id="Predator" name="q2" value="B">
         <label for="Predator">Predator... I like to terrorize humans and fish </label><br>
-
+    </div>
 
 <!-----------------3------------->
 
-<h3>3. If I was sea creature, my skin color would be </h3>
+<h3 id = "questionTitles">3. If I was sea creature, my skin color would be </h3>
 
+
+<div id = TheAnswers> 
         <input type="radio" id="pink" name="q3" value="A">
         <label for="pink"> pink </label><br>
 
@@ -53,11 +69,14 @@
 
         <input type="radio" id="BW" name="q3" value="D">
         <label for="BW"> black and white </label><br>
-
+</div>
 
 <!-----4 ------------------->
 
-<h3>  4. my skin would be nice and _____ </h3>
+<h3 id = "questionTitles">  4. my skin would be nice and  </h3>
+
+
+<div id = TheAnswers> 
     <input  type  = "radio" id ="rough" name ="q4" value = "A">
     <label for="rough"> rough </label><br>
 
@@ -65,16 +84,18 @@
     <label for="smooth"> smooth </label><br>
 
 
-
-
-        <button type="button" onclick="answer()" id = "button">Submit</button>
+</div>
+    
     </form>
+
+    <button type="button" onclick="answer()" id = "button"  style="padding: 0; border: none; background: none;">
+        <img src="../tesphotos/fish2.png" alt="Submit" style="width: 350px; height: auto;">
+    </button>
+
 
     <p id="result"></p>
 
     <p id="colorDisplay"></p>
-
-    <a href="page3.html" class="next "> next </a>
 
 
     <script src = "page2.js"></script>

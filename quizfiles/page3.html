@@ -5,53 +5,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="page3.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Lexend+Giga:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+
 </head>
 <body>
-    <a href="page4.html" class="next "> next </a>
 
-    <form id="fish questions">
+    <div id = "backButton"><a href = "page2.html"> go back !</a> </div>
+ 
+    <div id = "TITLE"> AM I FUNNY? </div>
+
+    <div class = "fish"><img src = "../tesphotos/question.png" width = "900px" height = "auto"></div>
+
+
+    <form class="fish-questions">
 
         <!----------- 1------------ -->
-             <h3> choose which image you think is funny </h3>        
+        <div> 
+             <h3 class = "titles"> 1. choose which image you think is funny </h3>        
+            
+             <div id = "TheAnswers"> 
+                <input type="radio" id="dad" name="qq1" value="A">
+                <label for="dad"> <img id = "pics" src = ../dadJokes/dadj1.jpg width = "200px"></label> 
         
-                <input type="radio" id="dad" name="q1" value="A">
-                <label for="dad"> <img src = ../../dadJokes/dadj1.jpg width = "300px"></label> 
+                <input type="radio" id="brainrot" name="qq1" value="B">
+                <label for="brainrot"><img id = "pics1" src = ../dadJokes/Brain1.jpg width = "300px"> </label> 
         
-                <input type="radio" id="brainrot" name="q1" value="B">
-                <label for="brainrot"><img src = ../../dadJokes/Brain1.jpg width = "300px"> </label> 
-        
-                <input type="radio" id="Notfunny" name="q1" value="C">
-                <label for="Notfunny"> <img src = ../../dadJokes/NF1.jpg width = "300px"> </label> 
-
+                <input type="radio" id="Notfunny" name="qq1" value="C">
+                <label for="Notfunny"> <img id = "pics2" src = ../dadJokes/NF1.jpg width = "150px" height = "200px"> </label> 
+            </div>
+            </div>
         <!--2-->
-            <h3> choose which joke is funny  </h3>
+        <div> 
 
-                <input type="radio" id="dad" name="q2" value="A">
-                <label for="dad"> I went to buy some camo pants but couldn't find any. </label> </br>
+            <h3 class = "titles"> 2. choose which joke is funny  </h3>
 
-                <input type="radio" id="brainrot" name="q2" value="B">
-                <label for="brainrot"> A man walks into a bar and says "Ow!"</label> </br>
+                
+            <div id = "TheAnswers"> 
 
-                <input type="radio" id="Notfunny" name="q2" value="C">
-                <label for="Notfunny"> What's a ghast's favorite country? The Nether-Lands!  </label> </br>
+                <input type="radio" id="dad1" name="qq2" value="A">
+                <label for="dad1"> I went to buy some camo pants but couldn't find any. </label> </br>
 
+                <input type="radio" id="brainrot1" name="qq2" value="B">
+                <label for="brainrot1"> What's a ghast's favorite country? The Nether-Lands!  </label> </br>
+     
+
+                <input type="radio" id="Notfunny1" name="qq2" value="C">
+                <label for="Notfunny1"> A man walks into a bar and says "Ow!"</label> </br>
+
+            </div>
+
+             </div>
         <!--3-->
 
-            <h3> why wont skeletons fight each other? </h3>
+            <h3 class = "titles"> 3. why wont skeletons fight each other? </h3>
 
+                
+            <div id = "TheAnswers"> 
+                <input type="radio" id="brainrot2" name="qq3" value="A">
+                <label for="brainrot2"> because they are dead </label> </br>
 
-                <input type="radio" id="brainrot" name="q3" value="A">
-                <label for="brainrot"> because they are dead </label> </br>
+                <input type="radio" id="Notfunny2" name="qq3" value="B">
+                <label for="Notfunny2"> They're bonely   </label>  </br>
 
-                <input type="radio" id="Notfunny" name="q3" value="B">
-                <label for="Notfunny"> They're bonely   </label>  </br>
-
-                <input type="radio" id="dad" name="q3" value="C">
-                <label for="dad"> they dont have the guts </label>  </br>
-
+                <input type="radio" id="dad2" name="qq3" value="C">
+                <label for="dad2"> they dont have the guts </label>  </br>
+            </div>
 
     </form>        
 
+    <button type="button" onclick="answer2()" id = "button"  style="padding: 0; border: none; background: none;">
+        <img src="../tesphotos/fish.png" alt="Submit" style="width: 260px; height: auto;">
+    </button>
+
+
+    <p id="colorDisplay"></p>
+
+    <script src = "page3.js"></script>
 
 </body>
 </html>

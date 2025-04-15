@@ -10,12 +10,11 @@
     src: url('../tesphotos/tomodachi_font_by_pokemon_diamond-d82qlqz.ttf') format('truetype');
   }
   
-  body {
-    font-family: 'MyCoolFont', sans-serif;
-  }
-  
+ 
 
 body {
+    font-family: 'MyCoolFont', sans-serif;
+
     display: flex;
     flex-direction: column; 
 
@@ -23,7 +22,7 @@ body {
     align-items: center;
     min-height: 100vh;
 
-    background-color: rgb(185, 227, 251);
+    background-color: rgb(203, 236, 255);
     position: relative;
 }
 
@@ -38,7 +37,7 @@ body::before {
     background-size: cover;
 
     animation: floatWaves 6s ease-in-out infinite;
-    z-index: -1; /* Keep it behind everything */
+    z-index: -1;
 }
 
 @keyframes floatWaves {
@@ -51,33 +50,88 @@ body::before {
 }
 
 .title{
-    /* font-family: "Montserrat", serif;
-    font-optical-sizing: auto; */
+   
 
     font-size: 70px;
-    color: rgb(77, 146, 189);
+    color: rgb(10, 104, 163);
+      
+    text-align: center;
 
     font-weight: 800;
 }
 
 .text{
-
+    padding: 2%;
     font-family: "Montserrat", serif;
     font-optical-sizing: auto;
 
-    font-size: 70px;
-    color: rgb(77, 146, 189);
+    font-size: 30px;
+    color: rgb(3, 51, 81);
 
     font-weight: 800;
 
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+
+    text-align: center;
+
+    flex-direction: column;
+
 }
+
+#subText{
+    padding: 2%;
+
+    font-size: 20px;
+    color: rgb(34, 110, 157);
+
+}
+
+#colors{
+    font-size: 20px;
+    
+
+}
+#colors1{
+    padding: 2%;
+
+    color: rgb(34, 110, 157);
+
+    
+
+}
+
 .options{
-    margin-top: 2%;
-    background-color: aliceblue;
     padding: 1%;
 }
 
 
 
+@media only screen and (max-width: 1000px) {
+    body {
+     transition-duration: 1.5s;
+      background-color: rgb(9, 53, 113);
+    }
 
+    .title{
+        color:rgb(163, 224, 255);
+    }
+   .text{
+    color: rgb(0, 0, 0);
+
+   } 
+    #subText{
+        color: rgb(0, 0, 0);
+    }
+
+    #colors1{
+
+        color: rgb(0, 21, 42);
+    }
+
+
+  }
 

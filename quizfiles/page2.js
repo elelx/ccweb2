@@ -10,6 +10,8 @@ if (favcolor) {
 }
 
 
+let answers = '';
+
 function answer() {
     let answers = [];
 
@@ -44,26 +46,8 @@ function answer() {
     //me local stprage
     localStorage.setItem("Results", result);
 
+    window.location.href = "page3.html"; // goes ro next page 
 
-    //shows in the text id -
-    document.getElementById("result").textContent = "You are aaaa : " + result;
-
-
-     // Show image result if it's a valid image path
-     if (result.endsWith(".jpg") || result.endsWith(".png") || result.endsWith(".jpeg") || result.endsWith(".gif")) {
-        let img = document.createElement('img');
-        img.src = result;
-        img.alt = "Your fish result";
-        img.width = 300;
-
-        let resultDiv = document.getElementById("result");
-        let existingImg = resultDiv.querySelector('img');
-        if (existingImg) {
-            resultDiv.removeChild(existingImg);
-        }
-
-        resultDiv.appendChild(img);
-    }
 }
 
 
@@ -107,16 +91,16 @@ function getFinalResult(answers) {
 // prey + cold water ---------------
 
     //rough  --> Crabs + Blobfish
-        "BAAA": "../fishImages/17.jpg", //pink
-        "BABA": "../fishImages/19.jpg", //blue
+        "BAAA": " ../fishImages/18.png", //pink
+        "BABA": "../fishImages/20.jpg ", //blue
 
         "BACA": "../fishImages/21.jpg",  //red
         "BADA": "../fishImages/23.jpg", //b+w
 
     //smooth  //--> plankton + snailfish 
 
-        "BAAB": "../fishImages/18.png", //pink
-        "BABB": "../fishImages/20.jpg", //blue
+        "BAAB": "../fishImages/17.jpg", //pink
+        "BABB": "../fishImages/19.jpg", //blue
 
         "BACB": "../fishImages/22.jpg", //red
         "BADB": "../fishImages/24.jpg", //b+w

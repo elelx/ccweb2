@@ -45,15 +45,42 @@ button.addEventListener("mouseover", function() {
 
 button.addEventListener("click", function() {
     if (runawyTracker >= finalTrack) {
-
+        
         window.location.href = "quizPrototype.html";
     }
   });
 
 
   // me local sotry for resukts 
-  let savedResult = localStorage.getItem("Results");
-if (savedResult) {
-    document.getElementById("result").textContent = "fishy fishy: " + savedResult;
-}
+
+const savedResult = localStorage.getItem("Results");
+
+  if (savedResult) {
+    const container = document.getElementById("resultContainer");
+
+    if (
+      savedResult.endsWith(".jpg") ||
+      savedResult.endsWith(".png") ||
+      savedResult.endsWith(".jpeg") ||
+      savedResult.endsWith(".gif")
+    ) {
+      const img = document.createElement("img");
+      img.src = savedResult;
+      img.alt = "Your fish result";
+      img.width = 300;
+      container.appendChild(img);
+    } else {
+      container.textContent = savedResult; // like "you are a bruh fish"
+    }
+  }
+
+  const savedResult2 = localStorage.getItem("Results2");
+
+  if(savedResult2){
+    const container = document.getElementById("resultContainer2");
+    container.textContent = savedResult2; // like "you are a bruh fish"
+
+
+  }
+
 
