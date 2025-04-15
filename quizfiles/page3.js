@@ -3,40 +3,38 @@ const favcolor = localStorage.getItem("NextPageColor");
 if (favcolor) {
 
     document.body.style.backgroundColor = favcolor;  
-
-
 }
 
+// quiz same code as my 2nd page just different input/variables---------------------------------------------
 
 let answers2 = '';
 
 function answer2() {
     let answers2 = [];
 
-    // Question 1
+//  1
     let qq1 = document.querySelector('input[name="qq1"]:checked'); 
-    // this basc says find the input aka the name question 1 and check which they chose a or b
     if (qq1) {
-        answers2.push(qq1.value); //saying if the value "a b c or d" wht ever is pciked --> goes into the results 
+        answers2.push(qq1.value); 
     } 
 
-    // Question 2
+//  2
     let qq2 = document.querySelector('input[name="qq2"]:checked');
     if (qq2) {
         answers2.push(qq2.value);
     } 
 
-    // Question 3
+ //  3
     let qq3 = document.querySelector('input[name="qq3"]:checked');
     if (qq3) {
         answers2.push(qq3.value);
     } 
 
 
-    // results
+// results
     let result2 = getFinalResult(answers2); // ze ansewrs r a cpmbp of arrays 
 
-    //me local stprage
+// local stprage
     localStorage.setItem("Results2", result2);
 
     window.location.href = "page4.html"; // goes ro next page 

@@ -1,8 +1,8 @@
-let favcolor = ''; //  variable to store me color
+let favcolor = ''; //  variable to store color
 
 
 
-// i made 4 diff event listner for each colored pic image 
+// i made 4 diff event listner for each colored pic image -------------------
 
 document.getElementById("Pink").addEventListener("click", function() {
     // this is basically saying, if hthe picture with the Id of Pink is clicked then this will happen
@@ -32,11 +32,14 @@ document.getElementById("blue").addEventListener("click", function() {
 });
 
 
-// save the  color for next page
+// save the  color for next page -----------------------------------------------
 
 function saveColor() {
     if (favcolor) {
         localStorage.setItem("NextPageColor", favcolor); //save to localStorage key : value
-        window.location.href = "page2.html"; // goes ro next page 
+        window.location.href = "page2.html"; //next page 
     }
 }
+
+
+

@@ -1,21 +1,23 @@
-const button = document.getElementById("startButton"); //i store me button in varibale
+const button = document.getElementById("startButton"); //store button  
 
-//buttons 
+//to track the hover button ---------------------------------------------------
+
 let runawyTracker = 0; //vars bascially trcking hw many rimes i hovered
 
-const finalTrack = 5; //bascially after 5 times it triggers me final action
+const finalTrack = 5; 
 
+//background -----------------------------
 
 const favcolor = localStorage.getItem("NextPageColor");
 
 if (favcolor) {
 
-    document.body.style.backgroundColor = favcolor;  
+    document.body.style.backgroundColor = favcolor;  //grabbing the saved option 
 }
 
+//run away button ---------------------------------------------
 
-button.addEventListener("mouseover", function() {
-             //bascially ^ says " if mouse is over the thing then do this .. function is what should happen "
+button.addEventListener("mouseover", function() { //bascially ^ says " if mouse is over the thing then do this .. function is what should happen "
 
     if(runawyTracker<finalTrack){
         runawyTracker ++; //add 1
@@ -39,7 +41,8 @@ button.addEventListener("mouseover", function() {
 
     }
 
-    if (runawyTracker === finalTrack) {
+
+    if (runawyTracker === finalTrack) { //this is to change the photo by using the img after the final hover
       const img = button.querySelector("img");
       img.src = "../tesphotos/shrimp3.png";
     }      
@@ -56,34 +59,31 @@ button.addEventListener("click", function() {
   });
 
 
-  // me local sotry for resukts 
+// the  local storage  for resukts 
 
 const savedResult = localStorage.getItem("Results");
+const savedResult2 = localStorage.getItem("Results2");
+
 
   if (savedResult) {
     const container = document.getElementById("FishResults");
 
-    if (
-      savedResult.endsWith(".jpg") ||
-      savedResult.endsWith(".png") ||
-      savedResult.endsWith(".jpeg") ||
-      savedResult.endsWith(".gif")
-    ) {
       const img = document.createElement("img");
       img.src = savedResult;
       img.alt = "Your fish result";
       img.width = 300;
-      container.appendChild(img);
-    } else {
-      container.textContent = savedResult; // like "you are a bruh fish"
-    }
-  }
 
-  const savedResult2 = localStorage.getItem("Results2");
+
+      img.onload = () => {
+      container.appendChild(img);
+       };  
+
+      }
+  
 
   if(savedResult2){
     const container = document.getElementById("HumorResults");
-    container.textContent = savedResult2; // like "you are a bruh fish"
+    container.textContent = savedResult2; 
 
 
   }
