@@ -6,6 +6,9 @@ let userFeeling = "";
 
 // When the form is submitted
 document.getElementById("divinationForm").addEventListener("submit", function(event) {
+
+
+    
   event.preventDefault();
   
   // Get user's input
