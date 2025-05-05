@@ -2,33 +2,32 @@ const catFactURL = "https://catfact.ninja/fact";
 
 
 
-let userFeeling = "";
-
-// When the form is submitted
-document.getElementById("divinationForm").addEventListener("submit", function(event) {
+let theAnswer = "";
 
 
-    
+document.getElementById("answer").addEventListener("submit", function(event) {
+
+//https://www.w3schools.com/jsref/event_preventdefault.asp 
   event.preventDefault();
   
-  // Get user's input
-  userFeeling = document.getElementById("feeling").value.trim().toLowerCase();
+  
+  theAnswer = document.getElementById("feeling").value.trim().toLowerCase(); //value trim --> input + delete thr spaces
 
-  // Clear old result
-  document.getElementById("result").innerHTML = "";
+  document.getElementById("result").innerHTML = ""; //1 iamge + clears page
 
-  // Start the magic!
   fetch(catFactURL)
     .then(response => response.json())
-    .then(handleCatFact)
+    .then(handlecatFact)
     .catch(error => console.log(error));
 });
 
 function getCatImageURL(word) {
   return `https://cataas.com/cat/says/${word}?size=50&color=black`;
+  
+  document.getElementById("result").innerHTML = "";
 }
 
-function handleCatFact(data) {
+function handlecatFact(data) {
   const fact = data.fact;
   console.log("Random Cat Fact:", fact);
 
@@ -40,7 +39,7 @@ function handleCatFact(data) {
   resultDiv.appendChild(message);
 
   // Show cat image with the user's feeling
-  fetch(getCatImageURL(userFeeling))
+  fetch(getCatImageURL(theAnswer))
     .then(response => response.blob())
     .then(showCatImage)
     .catch(error => {
