@@ -1,13 +1,20 @@
 const catFactURL = "https://catfact.ninja/fact";
+
+
+
 let userFeeling = "";
 
+// When the form is submitted
 document.getElementById("divinationForm").addEventListener("submit", function(event) {
   event.preventDefault();
   
+  // Get user's input
   userFeeling = document.getElementById("feeling").value.trim().toLowerCase();
 
+  // Clear old result
   document.getElementById("result").innerHTML = "";
 
+  // Start the magic!
   fetch(catFactURL)
     .then(response => response.json())
     .then(handleCatFact)
@@ -24,10 +31,12 @@ function handleCatFact(data) {
 
   const resultDiv = document.getElementById("result");
 
+  // Show the cat fact
   const message = document.createElement("p");
   message.textContent = `Your divination: ${fact}`;
   resultDiv.appendChild(message);
 
+  // Show cat image with the user's feeling
   fetch(getCatImageURL(userFeeling))
     .then(response => response.blob())
     .then(showCatImage)
