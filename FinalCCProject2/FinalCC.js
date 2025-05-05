@@ -1,4 +1,4 @@
-const catFactURL = "https://catfact.ninja/fact";
+const catFacts = "https://catfact.ninja/fact";
 
 
 
@@ -15,45 +15,47 @@ document.getElementById("answer").addEventListener("submit", function(event) {
 
   document.getElementById("result").innerHTML = ""; //1 iamge + clears page
 
-  fetch(catFactURL)
+  fetch(catFacts)
     .then(response => response.json())
     .then(handlecatFact)
     .catch(error => console.log(error));
 });
 
-function getCatImageURL(word) {
+function getCatImage(word) {
   return `https://cataas.com/cat/says/${word}?size=50&color=black`;
-  
+
   document.getElementById("result").innerHTML = "";
 }
 
 function handlecatFact(data) {
   const fact = data.fact;
-  console.log("Random Cat Fact:", fact);
 
-  const resultDiv = document.getElementById("result");
 
-  // Show the cat fact
+
+  const results = document.getElementById("result");
+
+        //showing the catfact 
   const message = document.createElement("p");
-  message.textContent = `Your divination: ${fact}`;
-  resultDiv.appendChild(message);
+  message.textContent = `heres a interesting cat fact for you,  ${fact}`;
 
-  // Show cat image with the user's feeling
-  fetch(getCatImageURL(theAnswer))
+
+  results.appendChild(message);
+
+
+  fetch(getCatImage(theAnswer))
     .then(response => response.blob())
     .then(showCatImage)
-    .catch(error => {
-      const errorMsg = document.createElement("p");
-      errorMsg.textContent = "Something went wrong with the cat image.";
-      resultDiv.appendChild(errorMsg);
-      console.error(error);
-    });
+    .catch(error => console.log(error));
+
 }
 
 function showCatImage(imageBlob) {
-  const resultDiv = document.getElementById("result");
 
+
+  const results = document.getElementById("result");
   const img = document.createElement("img");
+
+  
   img.src = URL.createObjectURL(imageBlob);
-  resultDiv.appendChild(img);
+  results.appendChild(img);
 }
