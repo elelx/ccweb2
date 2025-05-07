@@ -1,0 +1,90 @@
+*{
+
+    margin: 10px;
+}
+
+body{
+    background-color: aquamarine;
+
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+
+  
+
+}
+
+#title{
+
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+
+    font-size: 50px;
+    font-weight: 1000;
+
+
+}
+#Sub-title{
+    color:rgb(3, 112, 95);
+    font-size: 20px;
+
+}
+
+.TITLES{
+    text-align: center;
+    justify-content: center;
+}
+
+.theInputs {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+
+
+    gap: 20px;
+    padding: 50px;
+    height: auto;
+}
+
+.leftSide {
+    display: flex;
+    flex-direction: column;
+}
+
+.rightSide {
+    display: flex;
+    flex-direction: column;
+}
+
+#question{
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+    max-width: 400px;
+}
+
+#confession{
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+    max-width: 400px;
+
+}
+
+#button{
+    text-align: center;
+    justify-content: center;
+}
+
+
+#catFact {
+    font-size: 15px;
+    color: #333;
+    font-weight: bold;
+    max-width: 400px;
+}
+
+#catImage {
+    max-width: 400px;
+    height: auto;
+}
