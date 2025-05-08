@@ -5,7 +5,11 @@ const sound = document.getElementById('mySound');
 
 let theAnswer = "";
 
-//button
+
+
+//buttons
+
+
 document.getElementById("answer").addEventListener("submit", function(event) {
   sound.play();
 
@@ -34,7 +38,7 @@ document.getElementById("answer").addEventListener("submit", function(event) {
 //API
 function getCatImage(word) {
   // you "confession" on the image
-  return `https://cataas.com/cat/says/${word}?size=50&color=black`;
+  return `https://cataas.com/cat/says/${word}?size=20&color=black`;
 
 }
 
@@ -63,6 +67,7 @@ function handlecatFact(data) {
 
   //confesssion
   img.src = getCatImage(theAnswer);
+
 
   results.appendChild(img);
 }
